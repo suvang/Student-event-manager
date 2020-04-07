@@ -5,7 +5,7 @@ mongoose.set('useFindAndModify', false);
 const Employee = mongoose.model('Employee');
 const User = mongoose.model('User');
 const Employeeculture = mongoose.model('Employeeculture');
-var url = 'mongodb://localhost:27017/EmployeeDB';
+var url = process.env.MONGODB_URI || 'mongodb://localhost:27017/EmployeeDB';
 
 //incase loggedIn
 const redirectHomelogin = (req, res, next) => {
