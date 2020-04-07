@@ -20,9 +20,9 @@ app.set('views', path.join(__dirname,'/views/'));
 app.engine('hbs',exphbs({ extname: 'hbs', defaultLayout: 'mainLayout', layoutDir: __dirname + '/views/layouts/'}));
 app.set('view engine', 'hbs');
 app.use(session({secret:"hebfhebf",resave:false,saveUninitialized:true}));
-app.listen(3000, () => {
+/* app.listen(3000, () => {
 	console.log('express server started at port: 3000');
-});
+}); */
 
 
 app.use('/employee', employeeController);
