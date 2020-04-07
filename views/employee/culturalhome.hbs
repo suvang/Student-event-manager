@@ -1,0 +1,29 @@
+<style type="text/css">
+    img{
+        padding:1px;
+         border:2px solid #5383ce;
+         border-radius: 10px;
+    }
+</style>
+<h3>STUDENT DETAILS- CULTURAL EVENT &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; <a style="background-color: #1286edd6;" href="/employee" class="btn btn-secondary">&nbsp;GO BACK</a></h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+             <th style="font-size: 20px;letter-spacing: 1px;">Full Name</th>
+            <th style="font-size: 20px;letter-spacing: 1px;">Email</th>
+            <th style="font-size: 20px;letter-spacing: 1px;">USN</th>
+             <th style="font-size: 20px;letter-spacing: 1px;">Certificate</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td style="font-size: 18px;">{{this.fullName}}</td>
+            <td style="font-size: 18px;">{{this.email}}</td>
+           <td style="font-size: 18px;">{{this.usn}}</td>
+              <td><a style="font-size:16px; color:#4900d8f2;" href="{{this.certificateImagePath}}" download><img height="100" width="150" src="{{this.certificateImagePath}}"> Download</a></td>
+            
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

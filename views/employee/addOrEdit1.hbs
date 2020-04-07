@@ -1,0 +1,47 @@
+<style type="text/css">
+ 
+   .filepond--hopper{
+    width: 250px;
+    border: 1px solid;border-radius: 8px;
+   }
+
+</style>
+
+<h3>{{viewTitle}}</h3>
+
+<form  action="/employee" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{employeeculture._id}}">
+    <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" class="form-control" name="fullName" placeholder="Full Name" value="{{employeeculture.fullName}}">
+        <div class="text-danger">
+            {{employeeculture.fullNameError}}</div>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" class="form-control" name="email" placeholder="Email" value="{{employeeculture.email}}">
+        <div class="text-danger">
+            {{employeeculture.emailError}}</div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>USN</label>
+            <input type="text" class="form-control" name="usn" placeholder="Enter USN" value="{{employeeculture.usn}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Event Type</label>
+            <input type="text" class="form-control" name="eventtype" value="Cultural"></input>
+        </div>
+        <div style="margin: auto;">
+             <br>
+            <label>Upload Certificate</label>
+           <input type="file"  name="cover" class="filepond"> 
+        </div>
+    </div>
+    <br>
+    <div class="form-group">
+        <button href="list1" type="submit" class="btn btn-info"><i class="fa fa-database"></i>Submit</button>
+        <a class="btn btn-secondary" href="/employee/list1"><i class="fa fa-list-alt"></i> View All</a>
+         <a style="background-color: #0063bc;" class="btn btn-secondary" href="homelogin"><i class="fa fa-list-alt"></i> GO BACK TO ADMIN PANEL</a>
+    </div>
+</form>

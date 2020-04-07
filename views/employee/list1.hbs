@@ -1,0 +1,33 @@
+<style type="text/css">
+    img{
+        padding:1px;
+         border:2px solid #5383ce;
+         border-radius: 10px;
+    }
+</style>
+<h3><a class="btn btn-secondary" href="/employee/addOrEdit1"><i class="fa fa-plus"></i> Create New</a> Cultural Events List &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;   <a href="addOrEdit1" class="btn btn-secondary">&nbsp;GO BACK</a></h3>
+<table class="table table-striped">
+    <thead>
+         <tr>
+             <th style="font-size: 20px;letter-spacing: 1px;">Full Name</th>
+            <th style="font-size: 20px;letter-spacing: 1px;">Email</th>
+            <th style="font-size: 20px;letter-spacing: 1px;">USN</th>
+             <th style="font-size: 20px;letter-spacing: 1px;">Certificate</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+
+           <td style="font-size: 18px;">{{this.fullName}}</td>
+            <td style="font-size: 18px;">{{this.email}}</td>
+           <td style="font-size: 18px;">{{this.usn}}</td>
+             <td><img height="100" width="150" src="{{this.certificateImagePath}}"></td>
+            <td>
+                <a href="/employee/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+              <a href="/employee/delete1/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
