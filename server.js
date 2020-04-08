@@ -19,7 +19,7 @@ app.get('*', (request, response) => {
 	response.sendFile(path.join(__dirname, 'client/build', 'home'));
 }); */
 
-app.use(express.static(__dirname + '/public/index'));
+app.use(express.static(__dirname + '/layouts/'));
 
 app.use(bodyParser.urlencoded({
 	limit: '50mb',extended: true
