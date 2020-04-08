@@ -1,4 +1,4 @@
-var PORT = process.env.PORT || 5000;
+var PORT = process.env.PORT || 3000;
 require('./models/db');
 const express = require('express');
 const path = require('path');
@@ -20,9 +20,9 @@ app.set('views', path.join(__dirname,'/views/'));
 app.engine('hbs',exphbs({ extname: 'hbs', defaultLayout: 'mainLayout', layoutDir: __dirname + '/views/layouts/'}));
 app.set('view engine', 'hbs');
 app.use(session({secret:"hebfhebf",resave:false,saveUninitialized:true}));
-/* app.listen(3000, () => {
-	console.log('express server started at port: 3000');
-}); */
+app.listen(PORT, () => {
+	console.log('express server started at port:' + PORT);
+}); 
 
 
 app.use('/employee', employeeController);
