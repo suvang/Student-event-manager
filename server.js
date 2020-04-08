@@ -11,13 +11,15 @@ const employeeController = require('./controllers/employeeController');
 
 var app = express();
 
-if (process.env.NODE_ENV === 'production') {
+/*if (process.env.NODE_ENV === 'production') {
 	app.use(express.static('client/build'));
 }
 
 app.get('*', (request, response) => {
-	response.sendFile(path.join(__dirname, 'client/build', 'home.hbs'));
-});
+	response.sendFile(path.join(__dirname, 'client/build', 'home'));
+}); */
+
+express().use(express.static(path.join(__dirname,'views/employee')))
 
 app.use(bodyParser.urlencoded({
 	limit: '50mb',extended: true
