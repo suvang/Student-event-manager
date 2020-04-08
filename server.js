@@ -22,16 +22,6 @@ app.engine('hbs',exphbs({ extname: 'hbs', defaultLayout: 'mainLayout', layoutDir
 app.set('view engine', 'hbs');
 app.use(session({secret:"hebfhebf",resave:false,saveUninitialized:true}));
 
-if (process.env.NODE_ENV === "production") {
-	app.use(express.static("build"));
-
-
-   app.get("*", (req, res) => {
-        res.sendFile(path.resolve(__dirname + '/views/employee',  "build", "home.hbs"));
-    });
-
-}
-
 app.listen(PORT, () => {
 	console.log('express server started at port:' + PORT);
 }); 
