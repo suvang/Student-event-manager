@@ -11,7 +11,7 @@ const employeeController = require('./controllers/employeeController');
 
 var app = express();
 
-app.use(express.static(__dirname + '/views/employee/home.hbs'));
+app.use(express.static(__dirname + '/public'));
 
 app.use(bodyParser.urlencoded({
 	limit: '50mb',extended: true
