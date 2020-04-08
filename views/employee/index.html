@@ -16,6 +16,11 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
+   background-image: url(https://images.pexels.com/photos/1037992/pexels-photo-1037992.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+            background-repeat:no-repeat;
+    background-size:cover; 
+     max-width: 100%;
+    overflow-x: hidden;   
 }
 
 /* Float four columns side by side */
@@ -89,10 +94,12 @@ h4{
 
   </style>
 </head>
-<body>
-<h4 style="letter-spacing: 1px;" align="center">WELCOME TO EVENT MANAGER</h4>
-<h5 style="letter-spacing: 1px;" align="center">CHOOSE EVENT</h5>
 
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 offset-md-3" style=" border-radius: 30px;background-color:#ffffff5c;; margin-top: 25px;padding:20px;">
+            <h4 style="letter-spacing: 1px;" align="center">WELCOME TO EVENT MANAGER</h4>
+<h5 style="letter-spacing: 1px;" align="center">CHOOSE EVENT</h5>
 
 <div class="row">
   <div class="column">
@@ -128,5 +135,8 @@ h4{
  <div class="admin">
   <a style="border-radius:30px; background-color: #e9ecefc2; display: block;  width:100%;" class="btn btn-secondary" href="/employee/login"><i class="fa fa-list-alt"></i> <h2 style="color:#4e4d4d"  align="center">LOGIN AS ADMIN</h2></a>
  </div>
+        </div>
+    </div>
+  </div>
 </body>
 </html>
