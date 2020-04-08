@@ -19,8 +19,7 @@ app.get('*', (request, response) => {
 	response.sendFile(path.join(__dirname, 'client/build', 'home'));
 }); */
 
-var distDir = __dirname + "/dist/";
- app.use(express.static(distDir));
+app.use(express.static('/public'));
 
 app.use(bodyParser.urlencoded({
 	limit: '50mb',extended: true
