@@ -5,6 +5,7 @@ const path = require('path');
 const exphbs = require('express-handlebars');
 const bodyParser= require('body-parser');
 var session = require('express-session');
+var distDir = __dirname + "/dist/";
 
 const employeeController = require('./controllers/employeeController');
 
@@ -20,6 +21,7 @@ app.set('views', path.join(__dirname,'/views/'));
 app.engine('hbs',exphbs({ extname: 'hbs', defaultLayout: 'mainLayout', layoutDir: __dirname + '/views/layouts/'}));
 app.set('view engine', 'hbs');
 app.use(session({secret:"hebfhebf",resave:false,saveUninitialized:true}));
+app.use(express.static(distDir))
 app.listen(PORT, () => {
 	console.log('express server started at port:' + PORT);
 }); 
