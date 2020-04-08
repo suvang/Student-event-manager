@@ -19,7 +19,7 @@ app.get('*', (request, response) => {
 	response.sendFile(path.join(__dirname, 'client/build', 'home'));
 }); */
 
-express().use(express.static(path.join(__dirname,'views/employee')))
+express().use(express.static(path.join(__dirname,'public')))
 
 app.use(bodyParser.urlencoded({
 	limit: '50mb',extended: true
